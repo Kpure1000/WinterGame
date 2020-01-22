@@ -12,7 +12,7 @@ public:
 		std::string const& objecttypename);
 
 public: //  Control
-
+	
 	virtual void MoverEvent(sf::Vector2f speed);
 
 	virtual int CollisionCheck();
@@ -24,6 +24,6 @@ public: //  Game
 	virtual void SetUp();
 
 	virtual void Update();
-
+	friend void Mover(Player& player, sf::Vector2f speed);
 };
 

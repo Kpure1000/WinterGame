@@ -1,12 +1,26 @@
-﻿  AssetManager.cpp
-  GameObject.cpp
-  Plat.cpp
-  Player.cpp
-  WinterGame_Main.cpp
-  正在生成代码...
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244: “=”: 从“T”转换到“float”，可能丢失数据
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244:         with
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244:         [
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244:             T=unsigned int
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244:         ]
-  WinterGame.vcxproj -> C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\x64\Debug\WinterGame.exe
+﻿  Player.cpp
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244: “=”: 从“T”转换到“float”，可能丢失数据
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244:         with
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244:         [
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244:             T=unsigned int
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(40,14): error C2672: “std::invoke”: 未找到匹配的重载函数
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(47): message : 查看对正在编译的函数 模板 实例化“unsigned int std::thread::_Invoke<_Tuple,0,1,2>(void *) noexcept”的引用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(47): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(47): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(47): message :             _Tuple=_Tuple
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(47): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(53): message : 查看对正在编译的函数 模板 实例化“unsigned int (__cdecl *std::thread::_Get_invoke<_Tuple,0,1,2>(std::integer_sequence<unsigned __int64,0,1,2>) noexcept)(void *)”的引用
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(81): message : 查看对正在编译的函数 模板 实例化“std::thread::thread<void(__cdecl &)(Player &,sf::Vector2f),Player*,const sf::Vector2f&,void>(_Fn,Player *&&,const sf::Vector2f &)”的引用
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(81): message :         with
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(81): message :         [
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(81): message :             _Fn=void (__cdecl &)(Player &,sf::Vector2f)
+C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(81): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\chrono(669): message : 查看对正在编译的 类 模板 实例化“std::chrono::duration<double,std::ratio<1,1>>”的引用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\chrono(177): message : 查看对正在编译的 类 模板 实例化“std::chrono::duration<__int64,std::nano>”的引用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\chrono(647): message : 查看对正在编译的 类 模板 实例化“std::chrono::time_point<std::chrono::steady_clock,std::chrono::steady_clock::duration>”的引用
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(36,5): error C2893: 未能使函数模板“unknown-type std::invoke(_Callable &&,_Types &&...) noexcept(<expr>)”专用化
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\type_traits(1571): message : 参见“std::invoke”的声明
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(36,5): message : 用下列模板参数:
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(36,5): message : “_Callable=void (__cdecl *)(Player &,sf::Vector2f)”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\thread(36,5): message : “_Types={Player *, sf::Vector2<float>}”

@@ -16,12 +16,32 @@ void Player::MoverEvent(sf::Vector2f speed)
 	{
 		newx += speed.x;
 	}
-	if (KeyPressing and KeyEvent(Space))
+	if (KeyPressing and KeyEvent(Up))
 	{
 		if (CollisionCheck() == IsLanding)
 		{
 			dy = -18.0f;
 			newy += dy;
+		}
+	}
+}
+
+void Mover(Player& player,sf::Vector2f speed)
+{
+	if (KeyPressing and KeyEvent(Left))
+	{
+		player.newx -= speed.x;
+	}
+	if (KeyPressing and KeyEvent(Right))
+	{
+		player.newx += speed.x;
+	}
+	if (KeyPressing and KeyEvent(Up))
+	{
+		if (player.CollisionCheck() == player.IsLanding)
+		{
+			player.dy = -18.0f;
+			player.newy += player.dy;
 		}
 	}
 }
@@ -56,7 +76,12 @@ void Player::Update()
 	newx = sprite.getPosition().x,
 		newy = sprite.getPosition().y;
 	Gravity();
-	MoverEvent(MoveSpeed);
+	//MoverEvent(MoveSpeed);
+
+	thread MoveThread(Mover, this, MoveSpeed);
+
+	MoveThread.join();
+
 	sprite.setPosition(newx, newy);
 
 	Draw();

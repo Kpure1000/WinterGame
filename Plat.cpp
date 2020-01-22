@@ -1,20 +1,13 @@
 #include "Plat.h"
 
 Plat::Plat(sf::Sprite& sp, sf::RenderWindow& app, std::string const& objecttypename)
-	:GameObject(sp, app, objecttypename)
-{
+	:GameObject(sp, app, objecttypename) {
 
 }
 
  //  Control:///////////
 
-void Plat::MoverEvent(sf::Vector2f speed)
-{
-
-}
-
-int Plat::CollisionCheck()
-{
+int Plat::CollisionCheck() {
 	if (newy > App.getSize().y)
 	{
 		dy = -25.0f;
@@ -24,13 +17,11 @@ int Plat::CollisionCheck()
 
  //  Game://////////////
 
-void Plat::Draw()
-{
+void Plat::Draw() {
 	App.draw(sprite);
 }
 
-void Plat::SetUp()
-{
+void Plat::SetUp() {
 	newx = sprite.getPosition().x,
 		newy = sprite.getPosition().y;
 	
@@ -38,13 +29,12 @@ void Plat::SetUp()
 	sprite.setOrigin((float)size.width / 2, (float)size.height / 2);
 }
 
-void Plat::Update()
-{
+void Plat::Update() {
 	newx = sprite.getPosition().x,
 		newy = sprite.getPosition().y;
 
 	sf::Vector2f Speed(0, 0);
-	MoverEvent(Speed);
+
 	Gravity();
 
 	sprite.setPosition(newx, newy);

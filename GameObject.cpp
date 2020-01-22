@@ -13,13 +13,11 @@ GameObject::GameObject
 
 //  Set://///////////
 
-void GameObject::SetTexture(sf::Texture const& texture)
-{
+void GameObject::SetTexture(sf::Texture const& texture) {
 	sprite.setTexture(texture);
 }
 
-void GameObject::LoadTextureFromFile(std::string const& name)
-{
+void GameObject::LoadTextureFromFile(std::string const& name) {
 	sprite.setTexture(AssetManager::GetTexture(name));
 	sf::IntRect Rect;
 	Rect.left = 0;
@@ -29,52 +27,49 @@ void GameObject::LoadTextureFromFile(std::string const& name)
 	sprite.setTextureRect(Rect);
 }
 
-void GameObject::SetPosition(sf::Vector2f const& position)
-{
+void GameObject::SetPosition(sf::Vector2f const& position) {
 	sprite.setPosition(position);
 }
 
-void GameObject::SetScale(sf::Vector2f const& scale)
-{
+void GameObject::SetScale(sf::Vector2f const& scale) {
 	sprite.setScale(scale);
 }
 
-void GameObject::SetVisible(bool const& visible)
-{
+void GameObject::SetVisible(bool const& visible) {
 	Visible = visible;
 }
 
-void GameObject::SetGravity(bool const& gravity)
-{
+void GameObject::SetGravity(bool const& gravity) {
 	IsGravity = gravity;
 }
 
 //  Get:///////////
 
-bool GameObject::IsVisible()
-{
+bool GameObject::IsVisible() {
 	return Visible;
 }
 
-sf::Vector2f GameObject::GetPosition()
-{
+sf::Vector2f GameObject::GetPosition() {
 	return sprite.getPosition();
 }
 
-std::string GameObject::GetName()
-{
+std::string GameObject::GetName() {
 	return ObjectTypeName;
 }
 
 //  Control:///////////
 
-void GameObject::Gravity()
-{
-	if (!IsGravity)return;
+void GameObject::Gravity() {
+	if (!IsGravity) {
+		return;
+	}
 
-	if (CollisionCheck() == IsTop)
+	if (CollisionCheck() == IsTop) {
 		dy += GRAVITY;
-	else dy = 0;
+	}
+	else {
+		dy = 0;
+	}
 
 	newy += dy;
 }

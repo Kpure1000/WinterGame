@@ -2,8 +2,7 @@
 #include "GameObject.h"
 #include"Setting.h"
 class Player :
-	public GameObject
-{
+	public GameObject {
 private:
 
 public:
@@ -12,8 +11,10 @@ public:
 		std::string const& objecttypename);
 
 public: //  Control
-	
-	virtual void MoverEvent(sf::Vector2f speed);
+
+	friend void MoverX(Player& player, sf::Vector2f speed);
+
+	friend void MoverJump(Player& player);
 
 	virtual int CollisionCheck();
 
@@ -24,6 +25,5 @@ public: //  Game
 	virtual void SetUp();
 
 	virtual void Update();
-	friend void Mover(Player& player, sf::Vector2f speed);
 };
 

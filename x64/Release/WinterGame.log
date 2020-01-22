@@ -1,12 +1,10 @@
-﻿  Player.cpp
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244: “=”: 从“T”转换到“float”，可能丢失数据
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244:         with
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244:         [
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244:             T=unsigned int
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(34,23): warning C4244:         ]
+﻿  GameObject.cpp
+  Plat.cpp
+  Player.cpp
+  WinterGame_Main.cpp
   正在生成代码
-  6 of 276 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+  6 of 311 functions ( 1.9%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   WinterGame.vcxproj -> C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\x64\Release\WinterGame.exe

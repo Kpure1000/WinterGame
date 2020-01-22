@@ -1,7 +1,6 @@
 #pragma once
 #include"GameObject.h"
-class Plat : public GameObject
-{
+class Plat : public GameObject {
 private:
 public:
 
@@ -9,8 +8,6 @@ public:
 		std::string const& objecttypename);
 
 public: //  Control
-
-	virtual void MoverEvent(sf::Vector2f speed);
 
 	virtual int CollisionCheck();
 

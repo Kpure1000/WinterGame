@@ -10,8 +10,7 @@ using namespace std;
 //#pragma comment( linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"" )
 #define CannotResize  (sf::Style::Titlebar |  sf::Style::Close)
 
-int main()
-{
+int main() {
 	const float AppW = 900, AppH = 900;
 	RenderWindow App(VideoMode((unsigned int)AppW, (unsigned int)AppH), "WinterGame", CannotResize);
 	App.setFramerateLimit(120);
@@ -43,13 +42,10 @@ int main()
 	Plat1.SetUp();
 	Player1.SetUp();
 
-	while (App.isOpen())
-	{
+	while (App.isOpen()) {
 		Event ev;
-		while (App.pollEvent(ev))
-		{
-			if (ev.type == Event::Closed or ev.key.code == Keyboard::Key::Escape)
-			{
+		while (App.pollEvent(ev)) {
+			if (ev.type == Event::Closed or ev.key.code == Keyboard::Key::Escape) {
 				App.close();
 			}
 		}

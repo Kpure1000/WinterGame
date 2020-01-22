@@ -4,8 +4,7 @@
 #include<vector>
 #include<thread>
 #include"AssetManager.h"
-class GameObject
-{
+class GameObject {
 protected:
 
 	//Reference:
@@ -76,8 +75,6 @@ public: //  Get
 	std::string GetName();
 
 public: //  Control
-
-	virtual void MoverEvent(sf::Vector2f speed)=0;
 
 	void Gravity();
 

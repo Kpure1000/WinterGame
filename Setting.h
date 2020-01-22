@@ -6,7 +6,7 @@
 #define KeyEvent(EV) (Keyboard::isKeyPressed(Keyboard::EV))
 
 //Gravity Setting:
-const float GRAVITY = 0.6f;
+const float GRAVITY = 0.7f;
 
 //Position File Path:
 

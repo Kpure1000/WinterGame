@@ -1,7 +1,2 @@
-﻿  Player.cpp
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244: “=”: 从“T”转换到“float”，可能丢失数据
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244:         with
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244:         [
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244:             T=unsigned int
-C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\WinterGame\Player.cpp(54,23): warning C4244:         ]
+﻿  GameObject.cpp
   WinterGame.vcxproj -> C:\Users\Kpurek_surface\Desktop\SFML\WinterGame\x64\Debug\WinterGame.exe

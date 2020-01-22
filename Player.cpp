@@ -8,16 +8,29 @@ void MoverX(Player& player,sf::Vector2f speed) {
 	if (KeyPressing and KeyEvent(Left)) {
 		player.newx -= speed.x;
 	}
-	if (KeyPressing and KeyEvent(Right)) {
+	else if (KeyPressing and KeyEvent(Right)) {
 		player.newx += speed.x;
 	}
 }
 
-void MoverJump(Player& player) {
-	if (KeyPressing and KeyEvent(Up)) {
-		if (player.CollisionCheck() == player.IsLanding) {
-			player.dy = -20.0f;
-			player.newy += player.dy;
+void MoverJump(Player& player, sf::RenderWindow& App) {
+	int Count_sum = 0;
+	time_t StartTime = 0;
+	time_t JumpTime = 0;
+	while (App.isOpen()) {
+		if (StartTime == 0) {
+			StartTime = clock();
+		}
+		JumpTime = clock();
+		if (JumpTime - StartTime >= 1000
+			and KeyPressing and KeyEvent(Up)) {
+			if (player.CollisionCheck() == player.IsLanding) {
+				player.dy = -20.0f;
+				player.newy += player.dy;
+				Count_sum++; Count_sum %= INT_MAX;
+				cout << "Debug: JumpEvent Checked: " << Count_sum << endl;
+				StartTime = 0;
+			}
 		}
 	}
 }
@@ -48,8 +61,8 @@ void Player::Update() {
 
 	Gravity();
 
-	thread MoveThread(MoverJump, ref(*this));
-	MoveThread.join();
+	thread MoveXThread(MoverX, ref(*this), ref(MoveSpeed));
+	MoveXThread.join();
 
 	sprite.setPosition(newx, newy);
 

@@ -14,7 +14,7 @@ public: //  Control
 
 	friend void MoverX(Player& player, sf::Vector2f speed);
 
-	friend void MoverJump(Player& player);
+	friend void MoverJump(Player& player, sf::RenderWindow& App);
 
 	virtual int CollisionCheck();
 
@@ -26,4 +26,8 @@ public: //  Game
 
 	virtual void Update();
 };
+
+void MoverX(Player& player, sf::Vector2f speed);
+
+void MoverJump(Player& player, sf::RenderWindow& App);
 

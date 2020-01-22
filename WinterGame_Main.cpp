@@ -36,21 +36,26 @@ int main() {
 
 	Plat Plat1(Plat1_sp, App, "Plat1");
 	Plat1.SetGravity(false);
-	Plat1.SetScale({ 30,30 });
+	Plat1.SetScale({ 7,7 });
 	Plat1.SetPosition({ AppW / 2, AppH });
 
 	Plat1.SetUp();
 	Player1.SetUp();
 
+	thread MoveThread(MoverJump, ref(Player1), ref(App));
+
 	while (App.isOpen()) {
 		Event ev;
 		while (App.pollEvent(ev)) {
-			if (ev.type == Event::Closed or ev.key.code == Keyboard::Key::Escape) {
+			if (ev.type == Event::Closed ) {
+				App.close();
+			}
+			else if (KeyPressing and ev.key.code == Keyboard::Key::Escape) {
 				App.close();
 			}
 		}
 
-		App.clear(Color(0, 0, 0, 0));
+		App.clear(Color(200, 200, 150, 0));
 
 		Object_Player1 = &Player1;
 
@@ -61,11 +66,14 @@ int main() {
 		Object_Player1 = &Plat1;
 
 		Object_Player1->Update();
-
+		
 		App.setView(Player_ca);
 
 		App.display();
 
 	}
+
+	MoveThread.join();
+
 	return 0;
 }

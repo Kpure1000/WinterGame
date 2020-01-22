@@ -23,7 +23,7 @@ protected:
 		IsTop
 	};
 
-	sf::Vector2f const MoveSpeed = { 5.0f,5.0f };
+	sf::Vector2f const MoveSpeed = { 7.0f,7.0f };
 
 	const float Ffkx = 0.01f, Ffky = 0.01f;
 

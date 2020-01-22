@@ -60,12 +60,13 @@ std::string GameObject::GetName() {
 //  Control:///////////
 
 void GameObject::Gravity() {
+	if(newy<App.getSize().y)cout << "Check " << newy << endl;
 	if (!IsGravity) {
 		return;
 	}
 
 	if (CollisionCheck() == IsTop) {
-		dy += GRAVITY;
+		dy += GRAVITY; 
 	}
 	else {
 		dy = 0;
@@ -73,5 +74,6 @@ void GameObject::Gravity() {
 
 	newy += dy;
 }
+
 
 //end
